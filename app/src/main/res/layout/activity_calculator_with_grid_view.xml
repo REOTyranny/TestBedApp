@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:weightSum="10"
+    android:weightSum="12"
     tools:context=".CalculatorWithGridView">
 
     <RelativeLayout
@@ -25,7 +25,7 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="8"
+        android:layout_weight="10"
         android:stretchColumns="*">
 
         <TableRow android:layout_weight="2">
@@ -61,7 +61,9 @@
                 style = "@style/Base.Widget.AppCompat.ButtonBar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="/" />
+                android:text="/"
+                android:tag = "div"
+                android:onClick="op"/>
 
         </TableRow>
 
@@ -98,7 +100,9 @@
                 style = "@style/Base.Widget.AppCompat.ButtonBar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="*" />
+                android:text="*"
+                android:tag = "*"
+                android:onClick="op"/>
         </TableRow>
 
         <TableRow
@@ -135,17 +139,22 @@
                 style = "@style/Base.Widget.AppCompat.ButtonBar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="+" />
+                android:text="+"
+                android:tag = "+"
+                android:onClick="op"/>
         </TableRow>
 
         <TableRow
             android:layout_weight="2">
             <Button
                 android:id = "@+id/button12"
+                android:layout_weight="1"
                 style = "@style/Base.Widget.AppCompat.ButtonBar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="=" />
+                android:text="="
+                android:tag = "="
+                android:onClick="op"/>
 
             <Button
                 android:id = "@+id/button13"
@@ -157,19 +166,36 @@
                 android:text="0" />
 
             <Button
-                android:id = "@+id/button14"
-                style = "@style/Base.Widget.AppCompat.ButtonBar"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="clear" />
-
-            <Button
                 android:id = "@+id/button15"
                 style = "@style/Base.Widget.AppCompat.ButtonBar"
 
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="clear all" />
+                android:text="-"
+                android:tag = "-"
+                android:onClick="op"/>
+        </TableRow>
+        <TableRow
+            android:layout_weight="2">
+            <Button
+                android:id = "@+id/button18"
+                style = "@style/Base.Widget.AppCompat.ButtonBar"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="clear"
+                android:tag = "clear"
+                android:onClick="op"/>
+
+            <Button
+                android:id = "@+id/button19"
+                style = "@style/Base.Widget.AppCompat.ButtonBar"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="clear all"
+                android:tag = "clear all"
+                android:onClick="op"/>
         </TableRow>
     </TableLayout>
 

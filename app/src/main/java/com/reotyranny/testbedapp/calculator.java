@@ -88,7 +88,7 @@ public class calculator extends AppCompatActivity {
                 cur = cur +prev;
                 break;
             case subtraction:
-                cur = cur-prev;
+                cur = prev-cur;
                 break;
         }
         prev = 0;
